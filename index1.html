@@ -24,12 +24,19 @@
              </div>
              <div class="col-md-6 col-md-offset-3">
                 <div class="header-group__nav-menu">
-                <ul>
-                    <a href="" class="nav-menu__active"><li>Головна</li><div id="shadow"></div></a>
-                    <a href=""><li>Категорії</li></a>
-                    <a href=""><li>Галерея</li></a>
-                    <a href=""><li>Про пиво</li></a>
-                    <a href=""><li>Контакти</li></a>
+                <ul class="main-ul-menu">
+                   <li><a href="" class="nav-menu__active">Головна<div id="shadow"></div></a></li>
+                   <li class="main-li-menu"><a href="">Категорії</a>
+                            <ul class='submenu'>
+                                <li><a href="">Пиво</a></li>
+                                <li><a href="">Подорожі</a></li>
+                                <li><a href="">Книги</a></li>
+                                <li><a href="">Музика</a></li>
+                            </ul>
+                        </li>
+                    <li><a href="">Галерея</a></li>
+                    <li><a href="">Про пиво</a></li>
+                    <li><a href="">Контакти</a></li>
                 </ul>
             </div>
              </div>
@@ -112,9 +119,67 @@
         </div>
     </section>
 
+    
+    <section class="contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-form-group">
+                        <div class="contact-form-position">
+                        <form class="form" action="" method="get">
+                             <fieldset>
+                                 <legend>Напишіть нам</legend>
+                                    <div class="contact-input__name">
+                                        <input type="text" class="input-control__name" name="name">
+                                    </div>
+                                     <div class="contact-input__email">
+                                        <input type="email" class="input-control__email" name="email">
+                                    </div>
+                                    <div class="contact-input__textarea">
+                                        <textarea rows="" cols=""></textarea>
+                                    </div>
+                                    <button type="submit">Відправити</button>
+                             <fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contacts-info">
+                        <h2>Знайдіть нас тут:</h2>
+                        <p>місто Київ <br>вул. Бурмистенка, буд. 4</p>
+                        <p>+38 (093) 197 - 09 - 99 </p>
+                        <p>beerblog@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+         <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    design by Torolchuk <br>
+                    prod by Aleks Mytiuk <br>
+                    2017 year
+                 </div>
+                 <div class="col-md-4 col-md-offset-2">
+                     <div class="footer-logo">
+                         <h2>BEERCLUB</h2>
+                         <p>Головний пивний блог країни</p>
+                     </div>
+                 </div>
+                 <div class="col-md-2 col-md-offset-2">
+                     <a href="">facebook</a>
+                     <a href="">instagram</a>
+                     <a href="">twitter</a>
+                       
+                 </div>
+            </div>
+        </div>
+    </footer> 
 </div>
-
-
     <script type="text/javascript" src="libs/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="libs/jquery-migrate-1.4.1.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
