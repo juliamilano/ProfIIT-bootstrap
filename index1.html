@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
     <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="libs/Magnific-Popup-master/magnific-popup.css">
 </head>
 <body>
 <div class="main">
@@ -107,12 +108,16 @@
                         <div><img src="img/slide-2.jpg" alt="2"></div>
                         <div><img src="img/slide-3.jpg" alt="3"></div>
                         <div><img src="img/slide-4.jpg" alt="4"></div>
+                        <div><img src="img/slide-5.jpg" alt="5"></div>
+                        <div><img src="img/slide-6.jpg" alt="6"></div>
                  </div>
                  <div class="slider slider-nav">
-                     <div><img src="img/slide-1-mini.png" alt="1"></div>
-                     <div><img src="img/slide-2-mini.jpg" alt="2"></div>
-                     <div><img src="img/slide-3-mini.jpg" alt="3"></div>
-                     <div><img src="img/slide-4-mini.jpg" alt="4"></div>
+                     <div><a class="test-popup-link" href="img/slide-1.png"><img src="img/slide-1-mini.png" alt="1"><div class="vual"></div></a></div>
+                     <div><a class="test-popup-link" href="img/slide-2.jpg"><img src="img/slide-2-mini.jpg" alt="2"><div class="vual"></div></a></div>
+                     <div><a class="test-popup-link" href="img/slide-3.jpg"><img src="img/slide-3-mini.jpg" alt="3"><div class="vual"></div></a></div>
+                     <div><a class="test-popup-link" href="img/slide-4.jpg"><img src="img/slide-4-mini.jpg" alt="4"><div class="vual"></div></a></div>
+                     <div><a class="test-popup-link" href="img/slide-5.jpg"><img src="img/slide-5-mini.jpg" alt="5"><div class="vual"></div></a></div>
+                     <div><a class="test-popup-link" href="img/slide-6.jpg"><img src="img/slide-6-mini.jpg" alt="6"><div class="vual"></div></a></div>
                  </div>
                 </div>
              </div>
@@ -128,17 +133,15 @@
                         <div class="contact-form-position">
                         <form class="form" action="" method="get">
                              <fieldset>
-                                 <legend>Напишіть нам</legend>
-                                    <div class="contact-input__name">
-                                        <input type="text" class="input-control__name" name="name">
-                                    </div>
-                                     <div class="contact-input__email">
-                                        <input type="email" class="input-control__email" name="email">
+                                 <div class="contact-input__name-email">
+                                        <h3>Напишіть нам</h3>
+                                        <input type="text" class="input-control__name" name="name" placeholder="Ваше ім’я" required>  <br>                                 
+                                        <input type="email" class="input-control__email" name="email" placeholder="Ваше email" required>
                                     </div>
                                     <div class="contact-input__textarea">
-                                        <textarea rows="" cols=""></textarea>
+                                        <textarea rows="" cols="" name="comments" placeholder="Тут пишіть ваше повідомлення..."></textarea><br>
+                                        <button type="submit">Відправити</button>
                                     </div>
-                                    <button type="submit">Відправити</button>
                              <fieldset>
                         </form>
                         </div>
@@ -184,6 +187,7 @@
     <script type="text/javascript" src="libs/jquery-migrate-1.4.1.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+    <script src="libs/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
 	<script src="common.js"></script>
 </body>
 </html>

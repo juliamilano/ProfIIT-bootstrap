@@ -34,10 +34,10 @@ $(document).ready(function(){
         }
     });
     */
-(function($) { 
-    $(document).ready(function(){
-       $('.block-slider').slick();
-    });
+//(function($) { 
+$(document).ready(function(){
+    $('.block-slider').slick();
+});
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -57,7 +57,17 @@ $(document).ready(function(){
         centerMode: true,
         focusOnSelect: true
     });
-})(jQuery);
+//})(jQuery);
+
+$(document).ready(function() {
+    $('.slider-nav').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        //gallery: {
+         //   enabled: true
+        //}
+    });
+});
 
 });
 
