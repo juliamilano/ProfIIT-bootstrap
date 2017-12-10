@@ -5,6 +5,10 @@
     .header-group__nav-menu ul.main-ul-menu {
         padding-top: 35px;
         padding-left: 20%;
+
+        margin-top: 10px;
+        margin-left: 0px;
+        max-width: 550px;
         
     }
     .header-group__nav-menu ul.main-ul-menu > li{
@@ -152,7 +156,15 @@
     .header-group__logo{
         text-align: center;
     }
+    .header-group__logo p{
+        font-size: 16px;
+        text-align: center;
+    }
     .header-group__nav-menu ul.main-ul-menu {
+        margin-top: 180px;
+        margin-left: -150px;
+        max-width: 500px;
+
         padding-top: 0px;
         padding-left: 5%;
     }
@@ -211,7 +223,7 @@
         height: 200px;
         flex-basis: 110px;
         flex: 1;
-        top: 80px;
+        top: 60px;
      }
 
     .grid-menu p{
@@ -283,13 +295,179 @@
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 576px){
+     header{
+        height: 600px;
+    }
+     .header-group__logo{
+        text-align: center;
+    }
+    .header-group__nav-menu ul.main-ul-menu {
+        margin-top: 0px;
+        margin-left: 0px;
+        max-width: 550px;
+
+        padding-left: 40%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .header-group__nav-menu ul.main-ul-menu > li{
+        display: block;
+        padding-top: 5px;
+        border-bottom: 1px solid black;
+    }
+    .main-li-menu ul.submenu {
+        width: 100px;
+        height: 140px;
+        top: 0px;
+        left: 95px;
+    }
+        
+    .main-li-menu ul.submenu li a{
+        font-size: 16px;
+    }
+    
+    .grid-menu{
+        height: 50px;
+        max-width: 360px;
+        top: 10px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+     }
+
+    .grid-menu p{
+        font-family: 'Open Sans Extrabold';
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .grid-menu__1 {
+        background: url("img/grid-1.png") no-repeat -25px -105px;
+    }
+    .grid-menu__2 {
+        background: url("img/grid-2.png") no-repeat -20px -115px;
+    }
+    .grid-menu__3 {
+        background: url("img/grid-3.png") no-repeat -20px -115px;
+    }
+    .read-more {
+       height: 80px;
+       padding-top: 20px;
+    }
+
+    .advertising-info p{
+        font-size: 12px;
+    }
+
+    .slider-for.slick-initialized.slick-slider{
+        display: none;
+    }
+    button.slick-arrow{
+        position: absolute;
+        top: -18px;
+        left: 0px;
+        z-index: 22;
+    }
+    button.slick-arrow.slick-prev{
+        left: 40%;
+    }
+    button.slick-arrow.slick-next{
+        left: 55%;
+    }
+
+    .contact-form{
+        height: 750px;
+    }
+   
+    .contact-form .contacts-info p{
+        text-align: center;
+        font-size: 16px;
+    }
+    .contact-form .contacts-info p:nth-child(2):after,
+    .contact-form .contacts-info p:nth-child(3):after{
+        left: 45%;
+    }
+
+   
+    footer{
+        height: 174px;
+        padding: 10px 0 0 0;
+    }
+     .footer-link{
+        display: none;
+    }
+    /*footer .footer-link p{
+        font-size: 12px;
+    }
+    */
+    footer .footer-logo{
+        width: 170px;
+        height: 146px;
+        top: -15px;
+    }
+
+    .footer-logo h2{
+        font-size: 20px;
+    }
+
+    .footer-logo p{
+        font-size: 12px;
+    }
     
 }
 
 
 @media only screen and (max-width : 340px){
+    .header-group__nav-menu ul.main-ul-menu {
+        padding-left: 20%;
+    }
+    .read-more-button{
+        width: 180px;
+        height: 50px;
+        padding: 10px;
+    }
+    .advertising-info h3.h3-top{
+        margin: 5px 15px;
+        padding-top: 15px;
+        font-size: 16px;
+    }
+    .advertising-info p{
+        font-size: 10px;
+    }
+    .advertising-info h3.h3-bottom-converting{
+        height: 40px;
+        padding: 10px 30px;
+        font-size: 14px;
+    }
 
+    .contact-form-position{
+        top: -20px;
+        height: 400px;
+        width: 290px;
+        max-width: 290px;
+    }
+    footer{
+        height: 174px;
+        padding: 10px 0 0 0;
+    }
+    footer .footer-link p{
+        font-size: 10px;
+    }
+
+    footer .footer-logo{
+        width: 110px;
+        height: 150px;
+        top: -20px;
+    }
+
+    .footer-logo h2{
+        font-size: 18px;
+    }
+
+    .footer-logo p{
+        font-size: 14px;
+    }
+    .footer-link ul{
+        padding: 0;
+    }
 }
 
 
@@ -303,7 +481,7 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px){
-
+    
 }
 	/**/
 
