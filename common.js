@@ -46,7 +46,9 @@ $(document).ready(function(){
         draggable: true,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        autoplay: true,
+        autoplaySpeed: 2000
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
@@ -55,14 +57,14 @@ $(document).ready(function(){
         variableWidth: true,
         asNavFor: '.slider-for',
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true        
     });
 //})(jQuery);
 
 $(document).ready(function() {
     $('.slider-nav').magnificPopup({
         delegate: 'a',
-        type: 'image',
+        type: 'image'        
         //gallery: {
          //   enabled: true
         //}
@@ -70,4 +72,25 @@ $(document).ready(function() {
 });
 
 });
+
+// модальное окно отправки формы
+
+function AlertSubmit(){
+    var __self = this;
+    let modalWindow = document.getElementById('modal');
+    let modalAlert = document.querySelector('.modal-alert');
+    let buttonSubmit = document.getElementById('submit');
+
+    buttonSubmit.onclick = function(){
+        modalWindow.style.display = "block";
+        modalAlert.style.top = screen.availHeight/2 - modalAlert.offsetHeight/1.5 + "px";
+    
+    }
+}
+
+
+
+
+
+
 

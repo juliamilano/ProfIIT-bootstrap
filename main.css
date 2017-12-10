@@ -60,24 +60,32 @@ header{
     display: inline-block;
     -background: #f1ccc4;
     width: 85px;
-    height: 115px;
+    height: 90px;
     font-size: 18px;
     position: relative;
     text-align: center;
     z-index: 10;
     margin-right: 10px;
-    padding-top: 60px;
+    padding-top: 40px;
     text-shadow: 2px 2px 1px rgba(50, 50, 50, 1);
    
 }
-
+.header-group__nav-menu ul.main-ul-menu > li.nav-menu__active a{
+    position: relative;
+    z-index: 20;
+}
+.header-group__nav-menu ul.main-ul-menu > li a:hover{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
 .header-group__nav-menu ul.main-ul-menu > li:last-child {
     margin-right: 0;
 }
 /*.header-group__nav-menu ul a:first-child li{
     background: url('img/Rectangle.png');
 }*/
-.header-group__nav-menu ul.main-ul-menu > li:first-child {
+/*.header-group__nav-menu ul.main-ul-menu > li:first-child {
     position: relative;
     z-index: 10;
     height: 115px;
@@ -85,8 +93,8 @@ header{
     color: #2d2d31;
     text-shadow: none;
     box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
-}
-.header-group__nav-menu ul.main-ul-menu > li a.nav-menu__active:after {
+}*/
+/*.header-group__nav-menu ul.main-ul-menu > li a.nav-menu__active:after {
     content: "";
     position: absolute;
     top: 110px;
@@ -98,20 +106,41 @@ header{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 20%, 0% 100%);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
+}*/
+
 /*или градиентом? или картинкой с тенью?*/
 
-#shadow{
+.header-group__nav-menu ul.main-ul-menu > li.nav-menu__active:after{
+    content: "";
     position: absolute;
-    top: 124px;
+    top: 0px;
+    left: -2px;
+    background: -moz-linear-gradient(289deg, rgba(241,202,20,1) 0%, rgba(241,202,20,1) 73%, rgba(120,120,120,0.84) 74%, rgba(120,120,120,0) 79%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(241,202,20,1)), color-stop(73%, rgba(241,202,20,1)), color-stop(74%, rgba(120,120,120,0.84)), color-stop(79%, rgba(120,120,120,0))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(289deg, rgba(241,202,20,1) 0%, rgba(241,202,20,1) 73%, rgba(120,120,120,0.84) 74%, rgba(120,120,120,0) 79%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(289deg, rgba(241,202,20,1) 0%, rgba(241,202,20,1) 73%, rgba(120,120,120,0.84) 74%, rgba(120,120,120,0) 79%); /* opera 11.10+ */
+    background: -ms-linear-gradient(289deg, rgba(241,202,20,1) 0%, rgba(241,202,20,1) 73%, rgba(120,120,120,0.84) 74%, rgba(120,120,120,0) 79%); /* ie10+ */
+    background: linear-gradient(161deg, rgba(241,202,20,1) 0%, rgba(241,202,20,1) 73%, rgba(120,120,120,0.84) 74%, rgba(120,120,120,0) 79%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1ca14', endColorstr='#787878',GradientType=0 ); /* ie6-9 */
+    height: 150px;
+    width: 93px;
+    z-index: 5;
+
+}
+.header-group__nav-menu ul.main-ul-menu > li.nav-menu__active{
+      box-shadow: 9px 5px 5px -4px rgba(0,0,0,0.75), -5px 5px 5px -4px rgba(0,0,0,0.75);
+}
+/*#shadow{
+    position: absolute;
+    top: 54px;
     left: 1px;
     height: 10px;
     width: 85px;
     -background: rgba(0,0,0,0.1);
     box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
     transform: rotate(-20deg);
-
-}
+    z-index: 4;
+}*/
 .header-group__nav-menu > ul a {
     color: #fff;
 }
@@ -124,9 +153,9 @@ header{
 	width: 205px;
 	height: 175px;
 	position: absolute;
-    top: 100px;
+    top: 80px;
     left: -65px;
-    z-index: 10;
+    z-index: 30;
     text-align: left;
     margin: 0;
     padding: 10px 0;
@@ -163,21 +192,29 @@ header{
 }
 .main-li-menu ul.submenu li:hover a{
     color: #2d2d31;
+    text-shadow: none;
 }
 .header-group__nav-menu .main-li-menu:hover ul.submenu{
     display: block;
 }
 /* менюшки колонки три грида*/
-.header-info-grid{
+.row-grid-column{
+    padding: 0;
+    margin: 0;
+    -background: blue;
+}
+/*.header-info-grid{
     min-height: 340px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     -background: red;
-}
+}*/
+
 .grid-menu{
-    max-height: 350px;
-    max-width: 360px;
+    height: 350px;
+    -max-width: 360px;
+    flex-basis: 360px;
     flex: 1;
     background: #fff;
     position: relative;
@@ -193,7 +230,7 @@ header{
 }
 
 .grid-menu:nth-child(1){
-    margin-left: 15px;
+    -margin-left: 15px;
 }
 
 .grid-menu__1 {
@@ -227,14 +264,20 @@ header{
     height: 60px;
     background: #2d2d31;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     border-radius: 40px;
     font-size: 19px;
     text-transform: uppercase;
     position: relative;
     z-index: 10;
 }
-
+.read-more a:hover{
+    text-decoration: none;
+    color: #f1ca14;
+}
+.read-more-button:hover{
+    background: #161618;
+}
 .read-more hr{
     position: relative;
     border: 1px solid #2d2d31;
@@ -294,6 +337,7 @@ header{
     font-family: 'Open Sans';
     font-weight: 400;
     line-height: 1.8em;
+    font-size: 16px;
 }
 .advertising-info h3.h3-bottom-converting{
     height: 60px;
@@ -305,6 +349,13 @@ header{
     font-family: 'Open Sans Extrabold';
     text-transform: uppercase;
     position: relative;
+}
+.advertising-info a:hover{
+    text-decoration: none;
+  
+}
+.advertising-info a:hover h3.h3-bottom-converting{
+    color: #f1ca14;
 }
 .h3-bottom-converting::after{
     content: "";
@@ -320,7 +371,7 @@ header{
 
 .block-main-slider{
     background: #f1ca14;
-    padding: 25px 0 100px;
+    padding: 25px 0 170px;
 }
 
 .block-slider{
@@ -349,6 +400,7 @@ button.slick-arrow.slick-next{
     z-index: 22;
 }*/
 div.slick-slide{
+    margin: 0px 0;
     width: 220px;
 }
 .test-popup-link{
@@ -404,13 +456,14 @@ div.slick-slide{
 }
 .contact-form-position{
     position: absolute;
-    top: -50px;
+    top: -80px;
     left: 0;
     height: 490px;
     width: 555px;
     background: #fff;
     box-sizing: border-box;
     -overflow: hidden;
+    box-shadow: 0px 35px 10px 0px rgba(0,0,0,0.5);
 }
 .contact-form-position fieldset{
     display: flex;
@@ -455,13 +508,14 @@ div.slick-slide{
 .contact-input__textarea{
     height: 260px;
     background: #2d2d31;
-    padding: 30px 30px;
+    padding: 30px 0px;
     position: relative;
     text-align: center;
 }
 .contact-input__textarea textarea{
     height: 160px;
-    width: 496px;
+    width: 80%;
+    margin: 0 30px;
     background: #2d2d31;
     color: #fff;
     resize: none;
@@ -475,20 +529,144 @@ div.slick-slide{
     border-radius: 40px;
     font-size: 22px;
     text-transform: uppercase;
-    /*position: absolute;
-    bottom: -20px;
-    left: 0;
-    right: 0;*/
+    position: relative;
+    bottom: -30px;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
 }
+/* адрес */
 .contact-form .contacts-info{
     color: #fff;
-
+    text-align: center;
 }
-
+.contact-form .contacts-info h2{
+    font-size: 38px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    padding: 0px 15px 30px;
+    margin: 30px auto;
+    position: relative;
+    width: 396px;
+    border-bottom: 1px solid #fff;
+}
+/*.contact-form .contacts-info h2::after,*/
+.contact-form .contacts-info p:nth-child(2):after,
+.contact-form .contacts-info p:nth-child(3):after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 45%;
+    width: 50px;
+    height: 1px;
+    background: #fff;
+}
+.contact-form .contacts-info p{
+    font-size: 25px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 1.5em;
+    position: relative;
+    margin: 30px 0;
+}
 /*футер*/
 footer{
     width: 100%;
     height: 314px;
     background: #f1ca14;
     padding: 150px 0 0 0;
+
+}
+/*footer .col-md-2{
+background: #aff;
+}*/
+footer hr {
+   border-color: #2a2a2e;
+}
+
+
+footer .footer-logo-outside{
+    -background: #fff;
+    -width: 390px;
+    height: 100px;
+    position: relative;
+}
+footer .footer-logo{
+    background: #fff;
+    width: 390px;
+    height: 194px;
+    position: relative;
+    top: -62px;
+    box-shadow: -1px 2px 25px 0px rgba(0,0,0,0.5);
+}
+.footer-logo{
+    color: #2d2d31;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-logo h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    font-family: "Open Sans";
+    font-weight: 800;
+}
+
+.footer-logo p{
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+
+footer .footer-link{
+    height: 100px;
+}
+
+.footer-link ul{
+    height: 90px;
+    margin: 0;
+    padding: 0 0 0 60px;
+}
+
+.footer-link ul li{
+    width: 100px;
+    height: 30px;
+    padding: 5px 0;
+    text-align: right;
+    list-style: none;
+}
+.footer-link ul li a{
+    color: #2d2d31;
+}
+.footer-link ul li a:hover{
+    text-decoration: none;
+}
+
+
+/*модальное окно*/
+.modal-window-form-submit{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal-alert{
+    width: 300px;
+    height: 300px;
+    background: #f1ca14;
+    color: #2d2d31;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center; 
+    padding: 100px 0 0;
+    box-sizing: border-box;
+    border: 2px solid grey;
 }
